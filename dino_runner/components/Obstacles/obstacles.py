@@ -16,3 +16,8 @@ class LargeCactus(Obstacle):
         self.type = random.randint(0, 2)
         super().__init__(image, self.type)
         self.rect.y = 305
+
+
+# class Bird(Obstacle):
+#     def __init__(self, image):
+#         super().__init__(image, self.type)
