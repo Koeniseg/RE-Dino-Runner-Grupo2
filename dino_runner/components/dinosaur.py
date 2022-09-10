@@ -66,7 +66,6 @@ class Dinosaur():
 
     def jump(self):
         self.image = self.jump_img[self.type]
-        self.image = JUMPING
         if self.dino_jump:
             self.dino_rect.y -= self.jump_vel * 4
             self.jump_vel -= 0.8
@@ -98,6 +97,20 @@ class Dinosaur():
             else:
                 self.shield = False
                 self.update_to_default(SHIELD_TYPE)
+
+    def check_hammer(self, screen):
+        if self.hammer:
+            time_to_show = round((self.hammer_time_up - pygame.time.get_ticks()) / 100, 2)
+            if time_to_show >= 0:
+                if self.show_text:
+                    fond = pygame.font.Font('freesansbold.ttf', 18)
+                    text = fond.render(f'Hammer enable for {time_to_show}', True, (255, 99, 71))
+                    text_rect = text.get_rect()
+                    text_rect.center = (500, 40)
+                    screen.blit(text, text_rect)
+            else:
+                self.hammer = False
+                self.update_to_default(HAMMER_TYPE)
 
     def update_to_default(self, current_type):
         if self.type == current_type:

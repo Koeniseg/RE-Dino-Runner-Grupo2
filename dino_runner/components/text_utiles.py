@@ -3,7 +3,7 @@ import pygame
 from dino_runner.utils.constants import SCREEN_HEIGHT, SCREEN_WIDTH
 
 FRONT_STYLE = 'freesansbold.ttf'
-menu_color = (128, 0, 0)
+menu_color = (0, 128, 128)
 
 def get_score_element(points):
     font = pygame.font.Font(FRONT_STYLE, 25)

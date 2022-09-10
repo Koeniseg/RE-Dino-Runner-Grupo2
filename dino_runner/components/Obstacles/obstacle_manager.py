@@ -26,6 +26,8 @@ class ObstacleManager:
             if game.player.dino_rect.colliderect(obstacle.rect):
                 if game.player.shield:
                     self.obstacles.remove(obstacle)
+                elif game.player.hammer:
+                    self.obstacles.remove(obstacle)
                 else:
                     self.tries -= 1
                     game.lifes_manager.reduce_heart()
