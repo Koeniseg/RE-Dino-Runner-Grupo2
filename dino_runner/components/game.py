@@ -7,7 +7,7 @@ from dino_runner.components.cloud import Cloud
 from dino_runner.components.dinosaur import Dinosaur
 from dino_runner.components.Obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.text_utiles import get_score_element, get_menu_data
-from dino_runner.utils.constants import BG, CLOUD, FINAL_IMAGE, GAME_OVER, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, SOUND, TITLE, FPS
+from dino_runner.utils.constants import BG, CLOUD, FINAL_IMAGE, GAME_OVER, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
 
 
 class Game:
